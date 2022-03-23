@@ -45,9 +45,10 @@ i = rand(10)
 > nimmt eine liste von floats und printet sie mit newline am Ende
 * printc()
 > nimmt eine liste von floats und wandelt den wert über die Ascii Tabelle in einen char um mit newline am Ende
-```juri
-printc(72 101 108 108 111 32 87 111 114 108 100 33 ) \ printet Hello World! in die Konsole
-```
+
+printc(72 101 108 108 111 32 87 111 114 108 100 33 ) \ printet **Hello World!** in die Konsole
+
+
 ### Operator-Zeichen:
 ```juri
 +-*/><.=!%
