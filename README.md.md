@@ -27,7 +27,7 @@ operator *- l r
 import test/testme.jri
 
 -> derzeit nur ein import pro Datei, importiert parst und interpretiert den Inhalt der anderen Datei
-* siehe examples *
+* siehe importfun
 ```
 ### standard Bibliothek
 * rand()
