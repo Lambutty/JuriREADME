@@ -31,7 +31,7 @@ import test/testme.jri
 ```
 ### standard Bibliothek
 * rand()
-> rand(start=optional(float),end=float) // end ist exklusiv
+> rand(start=optional(float),end=float) // end ist exklusiv \
 > wenn rand() nur einen Parameter erhält wird der start der random range automatisch auf 0 gesetzt
 ```juri
 n = rand(1 10)
