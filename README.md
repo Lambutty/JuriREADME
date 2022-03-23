@@ -6,18 +6,21 @@
 
 
 * if
+```python
+if a < b then return a
+```
 * return
 * repeat
 * init
 * fun
-```juri
+```python
 fun add l r
 	return l+r
-# funktionsdefinition mit namen add und 2 parametern l und r
+# funktionsdefinition mit name add und 2 parametern l und r
 
 ```
 * operator
-```juri
+```python
 operator *- l r
 	return (l*r)-69
 # definition eines neuen operators *- 
@@ -27,7 +30,7 @@ operator *- l r
 * iterate
 * break
 * import
-```juri
+```python
 import test/testme.jri
 
 -> derzeit nur ein import pro Datei, importiert parst und interpretiert den Inhalt der anderen Datei
@@ -38,7 +41,7 @@ import test/testme.jri
 > rand(start=optional(float),end=float)
 > der end parameter ist exklusiv
 wenn rand() nur einen Parameter erhält wird der start der random range automatisch auf 0 gesetzt
-```juri
+```python
 n = rand(1 10)
 # n evaluiert zu einer zufälligen Zahl zwischen 1 und 9
 i = rand(10)
@@ -50,23 +53,23 @@ i = rand(10)
 	nimmt eine liste von floats und printet sie mit newline am Ende
 * printc()
 	nimmt eine liste von floats und wandelt den wert über die Ascii Tabelle in einen char um mit newline am Ende
-	```juri
+	```python
 	printc(72 101 108 108 111 32 87 111 114 108 100 33 )
 	# printet Hello World! in die Konsole
 	```
 ### Operator-Zeichen:
-```juri
+```python
 +-*/><.=!%
 ```
 
 ### Trennzeichen:
-```juri
+```python
 ()[]
 ```
 
 ### Kommentare:
 Kommentar derzeit nur am Anfang der Zeile
-```juri
+```python
 i = 0
 print(i + 420)
 # Ich bin ein Kommentar
@@ -78,7 +81,7 @@ print(69)
 Arrays haben eine **feste** Größe
 **Arraynamen** beginnen mit einem ```:```.
 Arrays werden mit folgender Sytax deklariert:
-```juri
+```python
 :myList = [1 2 3 4]          
 # Erstellt die Liste mit den gegebenen Elementen
 
@@ -88,13 +91,13 @@ Arrays werden mit folgender Sytax deklariert:
 :longList = init 1000 0      
 # Erstellt eine Liste mit 1000 nullen
 
-:evenNums = init 50 as i
+:evenNums = init 10 as i
     i * 2                    
-# Erstellt eine Liste mit den Zahlen 0,2,4,8... 
+# Erstellt eine Liste mit den Zahlen [0 2 4 8 10 12 14 16 18] 
 ```
 
 Einzelne Arrayelemente können per **Index** referenziert und geändert werden.  Das Erste Element hat den Index 0.
-```juri
+```python
 print(0:myList)     
 # gibt 1 aus
 print(-1:myList)    
@@ -104,19 +107,19 @@ print(-1:myList)
 ```
 
 Um die **Länge** eines Arrays herrauszufinden fragen Es einfach.
-```juri
+```python
 ?:myList            
 # evaluiert zu 4
 ```
 
 Um über ein Array zu **iterieren** stellt juri die ```iterate``` Anweisung zur Verfügung.
-```juri
+```python
 iterate :myList as x
     print(x)
 ```
 
-Egal ob iterate oder in einer if schleife können wir mit dem keyword ```break``` den schleifendurchlauf unterbrechen
-```juri
+in einer if schleife können wir mit dem keyword ```break``` den schleifendurchlauf unterbrechen
+```python
 i = 0
 if i < 10 repeat
 	if i == 5
@@ -128,27 +131,27 @@ if i < 10 repeat
 
 
 Hier noch ein Beispiel wie man mit einer Klassischen If-Schleife über ein Array iteriert.
-```juri
+```python
 i = 0
 if i < ?:myList repeat
-    print(i:myList)
+    printn(i:myList)
     i = i+1
 ```
 
 >*schaut gerne im Examples Ordner vorbei, dort findet ihr ein paar Programme die Juri geschrieben sind :)*
-
+___
 ### Geplante  aber noch nicht implementierte Features
 
 **Funktionsparameter** können als Array festgelegt werden
-```juri
+```python
 fun snipList :list start end
     i = start
     if i <= end repeat
-        print(i:list)
+        printn(i:list)
         i = i+1
 ```
 **Array Pointer**
-```juri
+```python
 :list = [1 4]
 fun add l r
 	l <- :list          
