@@ -138,42 +138,31 @@ if i < ?:myList repeat
     i = i+1
 ```
 
->*schaut gerne im Examples Ordner vorbei, dort findet ihr ein paar Programme die Juri geschrieben sind :)*
-___
-### Geplante  aber noch nicht implementierte Features
-
-**Funktionsparameter** können als Array festgelegt werden
-```python
-fun snipList :list start end
-    i = start
-    if i <= end repeat
-        printn(i:list)
-        i = i+1
-```
 **Array Pointer**
 ```python
-:list = [1 4]
-fun add l r
-	l <- :list          
-	return 0:l + 1:l
-	
-# l wird hierbei zum original array. Veränderungen an dem Array
-# innerhalb des Funktionsscopes verändern das ursprüngliche Array
+# Dieses Beispiel demonstriert den Einsatz von Array-Pointern
 
-:list = [1 to 10]
+:nums = [1 to 10]
 
-fun keeper modulo
-	l <- :list
-	if i < ?:l repeat
-		if (i:l%modulo) == 1
-			i:l = 0 
-	i=i+1
-	
-keeper(2)
+fun map :list
+#alle elemente der Ursprungsliste werden mit 2 multipliziert
+        i=0
+        if i < ?:list repeat
+                i:list = i:list * 2
+                i=i+1
+        0	
+# 0 am Ende weil Funktionen immer etwas returnen müssen was ist jedoch egal
+                
+map(:nums)
 
-# evaluiert die ursprungliste zu -> :list = [0 2 0 4 0 6 0 8 0 10]
-# alle ungraden Zahlen innerhalb der liste werden mit null ersetzt
-	
+iterate :nums as x
+        print(x)
 
-
+# output: 2 4 6 8 10 12 14 16 18 20
 ```
+
+
+>*schaut gerne im Examples Ordner vorbei, dort findet ihr ein paar Programme die Juri geschrieben sind :)*
+___
+
+	
